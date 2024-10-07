@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "height": 305,
+  "width": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/RDeconomist/observatory/main/O20_C1.csv"
+  },
+  "mark": {"type": "line", "color": "#e54753", "size": 2.75},
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "sort": [],
+      "title": null,
+      "axis": {"grid": false, "labelAngle": 0}
+    },
+    "y": {
+      "field": "value2",
+      "type": "quantitative",
+      "title": "CPI",
+      "scale": {"domain": [-0.4, 0.15]},
+      "axis": {
+        "grid": true,
+        "format": ".0%",
+        "labelFontSize": 11,
+        "title": "Real GDP growth",
+        "titleAlign": "left",
+        "titleAngle": 0,
+        "titleBaseline": "bottom",
+        "titleColor": "#676A86",
+        "titleFontSize": 12,
+        "titleX": 5,
+        "titleY": 15
+      }
+    },
+    "tooltip": [
+      {
+        "field": "date",
+        "type": "temporal",
+        "timeUnit": "yearmonth",
+        "title": "Date"
+      },
+      {
+        "field": "value2",
+        "type": "quantitative",
+        "format": ".1%",
+        "title": "Real GDP growth"
+      }
+    ]
+  }
+}
